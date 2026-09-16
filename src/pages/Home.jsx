@@ -9,39 +9,7 @@ import ClassFinder from "../components/ClassFinder";
 import PricingSection from "../components/PricingSection";
 import GallerySection from "../components/GallerySection";
 import FaqSection from "../components/FaqSection";
-
-const CLASSES = [
-  {
-    name: "Hatha Yoga",
-    desc: "Foundational practice focusing on physical postures and breathing techniques.",
-    img: "/assets/vakasan.png",
-    path: "/hatha-yoga",
-  },
-  {
-    name: "Ashtanga Yoga",
-    desc: "Structured sequences combining breath, strength and flexibility.",
-    img: "/assets/natraj asan.png",
-    path: "/ashtanga",
-  },
-  {
-    name: "Pranayama & Meditation",
-    desc: "Breathwork and mindfulness practices to calm the mind.",
-    img: "/assets/pranayama.PNG",
-    path: "/pranayama",
-  },
-  {
-    name: "Therapeutic Yoga",
-    desc: "Yoga sequences designed for recovery and pain management.",
-    img: "/assets/veerbhadrasana.jpeg",
-    path: "/therapeutic",
-  },
-  {
-    name: "Beginner Yoga",
-    desc: "Slow paced introduction perfect for new practitioners.",
-    img: "/assets/ek pad vakasana.png",
-    path: "/beginner-yoga",
-  },
-];
+import TransformativeClasses from "../components/TransformativeClasses";
 
 const FEATURES = [
   {
@@ -347,74 +315,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="classes" className="py-28 bg-sage-light/60">
-        <div className="max-w-7xl mx-auto px-6">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-20">
-              <span className="eyebrow">Our Offerings</span>
-              <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
-                Transformative Classes
-              </h2>
-              <p className="text-charcoal/70 mt-6 leading-relaxed">
-                Five focused practices — each taught with patience, precision,
-                and care for where you are today.
-              </p>
-            </div>
-          </Reveal>
+      <TransformativeClasses />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CLASSES.map((c) => (
-              <Reveal key={c.name} className="h-full">
-                <div className="card overflow-hidden h-full flex flex-col group">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={c.img}
-                      alt={c.name}
-                      className="w-full h-full object-cover saturate-[0.85] contrast-[1.02] group-hover:scale-[1.04] transition duration-700"
-                    />
-                    <div className="absolute inset-0 bg-sage/15 mix-blend-multiply"></div>
-                  </div>
-                  <div className="p-8 flex flex-col flex-1">
-                    <h4 className="font-display font-semibold text-2xl mb-3 text-sage-dark">
-                      {c.name}
-                    </h4>
-                    <p className="text-charcoal/65 leading-relaxed mb-8 flex-1">
-                      {c.desc}
-                    </p>
-                    <Link
-                      to={c.path}
-                      className="text-primary font-semibold inline-flex items-center gap-2 group/link"
-                    >
-                      Learn More
-                      <span className="transition-transform duration-300 group-hover/link:translate-x-1">
-                        →
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-
-            <Reveal className="h-full">
-              <div className="card bg-sage-dark text-white p-10 h-full flex flex-col justify-center text-center">
-                <h4 className="font-display text-2xl font-semibold mb-4">
-                  Start Your Journey
-                </h4>
-                <p className="text-white/70 leading-relaxed mb-8">
-                  Not sure which class is right for you? Book a free trial
-                  orientation.
-                </p>
-                <a
-                  href="#contact"
-                  className="bg-primary text-white px-8 py-3.5 rounded-full font-bold hover:bg-primary-dark transition"
-                >
-                  Book Trial Class
-                </a>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       <ClassFinder />
 
