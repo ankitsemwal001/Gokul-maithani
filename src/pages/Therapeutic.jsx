@@ -56,7 +56,7 @@ export default function Therapeutic() {
         <div className="absolute inset-0 bg-gradient-to-r from-linen via-linen/85 to-linen/30"></div>
 
         <Reveal>
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
             <div className="max-w-2xl">
               <span className="inline-block mb-6 px-4 py-1.5 text-xs font-bold rounded-full bg-sage/20 text-sage-dark uppercase tracking-[0.2em]">
                 Healing Practice
@@ -77,7 +77,7 @@ export default function Therapeutic() {
         </Reveal>
       </section>
 
-      <section className="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
           <div>
             <h2 className="text-3xl md:text-4xl font-display text-sage-dark mb-6">
@@ -127,7 +127,7 @@ export default function Therapeutic() {
       </section>
 
       <section className="py-24 bg-sage-light/60">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <Reveal>
             <h3 className="text-3xl md:text-4xl font-display text-sage-dark mb-16">
               Key Benefits
@@ -151,7 +151,7 @@ export default function Therapeutic() {
         </div>
       </section>
 
-      <section className="py-24 max-w-6xl mx-auto px-6">
+      <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center">
           <Reveal>
             <h3 className="text-3xl md:text-4xl font-display text-sage-dark mb-16">

@@ -10,67 +10,7 @@ import PricingSection from "../components/PricingSection";
 import GallerySection from "../components/GallerySection";
 import FaqSection from "../components/FaqSection";
 import TransformativeClasses from "../components/TransformativeClasses";
-
-const FEATURES = [
-  {
-    title: "Certified Yoga Trainer",
-    desc: "Professional certification in traditional Hatha and modern Vinyasa styles.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Personalized Guidance",
-    desc: "Tailored sessions that respect and challenge your unique body mechanics.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="8" r="4" />
-        <path d="M5.5 20a6.5 6.5 0 0113 0" />
-      </svg>
-    ),
-  },
-  {
-    title: "Focus on Breath & Posture",
-    desc: "Deep emphasis on alignment and pranayama for lasting internal peace.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2v6a4 4 0 008 0V2" />
-        <path d="M12 8v14" />
-        <path d="M12 10a4 4 0 01-8 0V6" />
-      </svg>
-    ),
-  },
-];
+import AboutSection from "../components/AboutSection";
 
 const WHY_ITEMS = [
   {
@@ -258,63 +198,7 @@ export default function Home() {
       </section>
 
       <StatsCounter />
-
-      <section id="about" className="py-28 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
-          <Reveal className="lg:col-span-5">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-sage/15 rounded-3xl -z-10"></div>
-              <img
-                src="/assets/about.png"
-                alt="Gokul Maithani"
-                className="rounded-3xl shadow-card w-full h-[420px] md:h-[540px] object-cover saturate-[0.85]"
-              />
-              <div className="absolute bottom-6 left-6 right-6 bg-linen/95 backdrop-blur px-7 py-5 rounded-2xl rounded-bl-none border-l-4 border-primary shadow-card">
-                <p className="italic text-charcoal/80 font-display">
-                  "Yoga is not just about the pose, it's about who you become
-                  while doing it."
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          <div className="lg:col-span-7">
-            <Reveal>
-              <div className="max-w-xl">
-                <span className="eyebrow">The Journey</span>
-                <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4 mb-6 leading-tight">
-                  About Gokul Maithani
-                </h2>
-                <p className="text-charcoal/75 text-lg leading-relaxed mb-12">
-                  A certified instructor focusing on physical, mental, and
-                  spiritual well-being through personalized guidance and
-                  mindfulness. With over a decade of experience, Gokul brings a
-                  modern scientific approach to traditional yogic wisdom.
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="grid sm:grid-cols-3 gap-8">
-              {FEATURES.map((f) => (
-                <Reveal key={f.title} className="h-full">
-                  <div className="h-full">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-sage/15 text-sage-dark mb-4">
-                      {f.icon}
-                    </div>
-                    <h4 className="font-display font-semibold text-lg mb-2 text-sage-dark">
-                      {f.title}
-                    </h4>
-                    <p className="text-sm text-charcoal/65 leading-relaxed">
-                      {f.desc}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <AboutSection />
       <TransformativeClasses />
 
 
@@ -322,7 +206,7 @@ export default function Home() {
 
       <section id="schedule" className="py-28 max-w-7xl mx-auto px-6">
         <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-20">
+          <div className="text-center max-w-7xl mx-auto mb-20">
             <span className="eyebrow">Timings</span>
             <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
               Class Schedule
@@ -381,7 +265,7 @@ export default function Home() {
       <section className="py-28 bg-sage-light/60">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-20">
+            <div className="text-center max-w-7xl mx-auto mb-20">
               <span className="eyebrow">Our Philosophy</span>
               <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
                 Why Practice With Us?

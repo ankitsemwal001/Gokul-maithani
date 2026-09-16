@@ -154,7 +154,7 @@ export default function Pranayama() {
       </section>
 
       <section className="bg-sage-light/60 py-24">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <Reveal>
             <h3 className="font-display text-3xl md:text-4xl text-sage-dark mb-16">
               Holistic Benefits
@@ -179,7 +179,7 @@ export default function Pranayama() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="bg-sage-dark text-white rounded-3xl p-10 md:p-16 flex flex-col md:flex-row justify-between items-center gap-16 shadow-card">
           <div className="flex-1">
             <h3 className="font-display text-3xl mb-10">Class Details</h3>
@@ -227,7 +227,7 @@ export default function Pranayama() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
+      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
         <Reveal>
           <h3 className="font-display text-3xl md:text-4xl text-sage-dark mb-4">
             Weekly Schedule
@@ -267,7 +267,7 @@ export default function Pranayama() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 pb-24">
+      <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="bg-sage-light/60 rounded-3xl text-center p-12 md:p-16">
           <Reveal>
             <h3 className="font-display text-3xl text-sage-dark mb-6">

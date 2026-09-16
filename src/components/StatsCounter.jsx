@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 const STATS = [
   {
-    number: "10+",
+    number: "5+",
     label: "Years of Experience",
     subtext: "Traditional & Modern Practice",
     icon: (
@@ -21,7 +21,7 @@ const STATS = [
     ),
   },
   {
-    number: "1,500+",
+    number: "500+",
     label: "Students Guided",
     subtext: "Beginners to Advanced",
     icon: (
@@ -41,7 +41,7 @@ const STATS = [
     ),
   },
   {
-    number: "500+",
+    number: "200+",
     label: "Hours Certified",
     subtext: "Yoga Alliance Standard",
     icon: (

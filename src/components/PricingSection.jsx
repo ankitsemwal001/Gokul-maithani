@@ -55,24 +55,6 @@ const TIERS = [
     ctaLink: "#contact",
     btnStyle: "btn-outline w-full py-3.5 text-sm",
   },
-  {
-    name: "Weekend Immersion",
-    price: "₹3,500",
-    period: "/ 2-Day Rishikesh Intensive",
-    desc: "A weekend deep-dive into breathwork, bandhas, philosophy, and alignment in Rishikesh.",
-    featured: false,
-    badge: "Weekend Intensive",
-    features: [
-      "4 Comprehensive practice masterclasses",
-      "Classical Pranayama & Ganga meditation",
-      "Postural anatomy & hands-on adjustments",
-      "Herbal tea & wholesome yogic snacks",
-      "Certificate of Participation",
-    ],
-    ctaText: "Inquire for Dates",
-    ctaLink: "#contact",
-    btnStyle: "btn-outline w-full py-3.5 text-sm",
-  },
 ];
 
 export default function PricingSection() {
@@ -80,7 +62,7 @@ export default function PricingSection() {
     <section id="pricing" className="py-28 bg-sage-light/50">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-20">
+          <div className="text-center max-w-7xl mx-auto mb-20">
             <span className="eyebrow">Membership & Investment</span>
             <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
               Simple, Transparent Plans
@@ -91,7 +73,7 @@ export default function PricingSection() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {TIERS.map((tier) => (
             <Reveal key={tier.name} className="h-full">
               <div

@@ -105,7 +105,7 @@ export default function ClassFinder() {
     <section id="class-finder" className="py-24 bg-gradient-to-b from-linen via-sage-light/40 to-linen">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-7xl mx-auto mb-16">
             <span className="eyebrow">Personalized Path</span>
             <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
               Find Your Perfect Practice

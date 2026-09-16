@@ -68,13 +68,15 @@ export default function TransformativeClasses() {
       id="classes"
       className="py-24 md:py-28 bg-sage-light/60 relative overflow-hidden"
     >
-      {/* Decorative subtle ambient background accents */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-gradient-to-b from-white/60 to-transparent pointer-events-none -z-0"></div>
+      {/* Decorative subtle ambient background accents matching header width */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 h-96 pointer-events-none -z-0">
+        <div className="w-full h-full bg-gradient-to-b from-white/60 to-transparent"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <Reveal>
-          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <div className="text-center max-w-7xl mx-auto mb-14 md:mb-16">
             <span className="eyebrow">Our Offerings</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-sage-dark mt-3 mb-2 leading-tight">
               Transformative Yoga Classes in Rishikesh
@@ -99,7 +101,7 @@ export default function TransformativeClasses() {
         </Reveal>
 
         {/* Carousel Container: Cards strictly bounded inside between left and right arrows */}
-        <div className="relative max-w-7xl mx-auto flex items-center gap-2 sm:gap-4 md:gap-6">
+        <div className="relative w-full flex items-center gap-2 sm:gap-4 md:gap-6">
           {/* Left Arrow (Outside the cards track) */}
           <button
             type="button"
@@ -135,11 +137,11 @@ export default function TransformativeClasses() {
                 pauseOnMouseEnter: true,
               }}
               coverflowEffect={{
-                rotate: 22,
-                stretch: -20,
-                depth: 160,
+                rotate: 18,
+                stretch: 40,
+                depth: 120,
                 modifier: 1,
-                scale: 0.9,
+                scale: 0.92,
                 slideShadows: false,
               }}
               pagination={{

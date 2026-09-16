@@ -37,9 +37,9 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="py-28 bg-gradient-to-b from-linen via-sage-light/30 to-linen">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <Reveal>
-          <div className="text-center mb-16">
+          <div className="text-center max-w-7xl mx-auto mb-16">
             <span className="eyebrow">Got Questions?</span>
             <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
               Frequently Asked Questions
@@ -50,7 +50,7 @@ export default function FaqSection() {
           </div>
         </Reveal>
 
-        <div className="space-y-4">
+        <div className="max-w-4xl mx-auto space-y-4">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
