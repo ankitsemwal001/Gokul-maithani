@@ -1,32 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Home -->
   <url>
     <loc>https://gokul-maithani.vercel.app/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Clean Primary Sections -->
   <url>
-    <loc>https://gokul-maithani.vercel.app/hatha-yoga</loc>
+    <loc>https://gokul-maithani.vercel.app/schedule</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/about</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gokul-maithani.vercel.app/ashtanga</loc>
+    <loc>https://gokul-maithani.vercel.app/classes</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/pricing</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gokul-maithani.vercel.app/pranayama</loc>
+    <loc>https://gokul-maithani.vercel.app/gallery</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/faq</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gokul-maithani.vercel.app/therapeutic</loc>
+    <loc>https://gokul-maithani.vercel.app/contact</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated High-Intent Yoga Courses -->
+  <url>
+    <loc>https://gokul-maithani.vercel.app/hatha-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/ashtanga-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/pranayama-meditation-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/therapeutic-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/beginner-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gokul-maithani.vercel.app/vinyasa-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gokul-maithani.vercel.app/beginner-yoga</loc>
+    <loc>https://gokul-maithani.vercel.app/alignment-mobility-yoga-rishikesh</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

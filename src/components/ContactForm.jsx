@@ -36,13 +36,13 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full rounded-xl border border-sage/30 bg-white px-5 py-3.5 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition";
+    "w-full rounded-xl border border-sage/30 bg-white px-4 py-3 sm:px-5 sm:py-3.5 text-sm sm:text-base text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition";
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
         <div>
-          <label className="block text-sm font-semibold mb-2 text-charcoal/80">
+          <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-charcoal/80">
             Full Name
           </label>
           <input
@@ -53,12 +53,12 @@ export default function ContactForm() {
             className={inputClass}
           />
           {errors.name && (
-            <p className="text-red-500 text-sm mt-1">Please enter your name</p>
+            <p className="text-red-500 text-xs sm:text-sm mt-1">Please enter your name</p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-semibold mb-2 text-charcoal/80">
+          <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-charcoal/80">
             Phone Number
           </label>
           <input
@@ -69,14 +69,14 @@ export default function ContactForm() {
             className={inputClass}
           />
           {errors.phone && (
-            <p className="text-red-500 text-sm mt-1">
+            <p className="text-red-500 text-xs sm:text-sm mt-1">
               Enter a valid phone number
             </p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-semibold mb-2 text-charcoal/80">
+          <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-charcoal/80">
             Your Message
           </label>
           <textarea
@@ -87,13 +87,13 @@ export default function ContactForm() {
             className={inputClass}
           ></textarea>
           {errors.message && (
-            <p className="text-red-500 text-sm mt-1">Message cannot be empty</p>
+            <p className="text-red-500 text-xs sm:text-sm mt-1">Message cannot be empty</p>
           )}
         </div>
 
         <button
           disabled={sending}
-          className="w-full bg-primary text-white font-bold py-4 rounded-full flex justify-center items-center gap-3 hover:bg-primary-dark hover:shadow-card transition disabled:opacity-70"
+          className="w-full bg-primary text-white font-bold py-3.5 sm:py-4 rounded-full flex justify-center items-center gap-3 hover:bg-primary-dark hover:shadow-card transition text-sm sm:text-base disabled:opacity-70"
         >
           <span>{sending ? "Opening WhatsApp..." : "Send Enquiry"}</span>
           {sending && (
@@ -117,13 +117,13 @@ export default function ContactForm() {
       </form>
 
       {showSuccess && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-10 max-w-sm text-center shadow-2xl">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center animate-bounce">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-10 max-w-sm w-full text-center shadow-2xl animate-fade-in-up">
+            <div className="flex justify-center mb-4 sm:mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center animate-bounce">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 text-white"
+                  className="w-7 h-7 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="3"
@@ -137,15 +137,15 @@ export default function ContactForm() {
                 </svg>
               </div>
             </div>
-            <h3 className="text-2xl font-semibold mb-4 text-sage-dark">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-sage-dark">
               Message Ready
             </h3>
-            <p className="text-charcoal/60 mb-6">
+            <p className="text-charcoal/60 text-xs sm:text-sm mb-6">
               WhatsApp chat opened. Just press send to complete your enquiry.
             </p>
             <button
               onClick={() => setShowSuccess(false)}
-              className="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary-dark transition"
+              className="bg-primary text-white px-6 py-2.5 sm:py-3 rounded-full font-bold text-sm hover:bg-primary-dark transition"
             >
               Close
             </button>

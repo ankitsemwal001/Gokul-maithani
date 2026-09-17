@@ -1,4 +1,121 @@
 {
+  "redirects": [
+    {
+      "source": "/pages/home.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/hatha-yoga.html",
+      "destination": "/hatha-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pages/ashtanga.html",
+      "destination": "/ashtanga-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pages/pranayama.html",
+      "destination": "/pranayama-meditation-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pages/therapeutic.html",
+      "destination": "/therapeutic-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pages/beginner-yoga.html",
+      "destination": "/beginner-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pages/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hatha-yoga",
+      "destination": "/hatha-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/hatha-yoga.html",
+      "destination": "/hatha-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/ashtanga",
+      "destination": "/ashtanga-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/ashtanga.html",
+      "destination": "/ashtanga-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pranayama",
+      "destination": "/pranayama-meditation-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/pranayama.html",
+      "destination": "/pranayama-meditation-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/therapeutic",
+      "destination": "/therapeutic-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/therapeutic.html",
+      "destination": "/therapeutic-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/beginner-yoga",
+      "destination": "/beginner-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/beginner-yoga.html",
+      "destination": "/beginner-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/vinyasa",
+      "destination": "/vinyasa-yoga-rishikesh",
+      "permanent": true
+    },
+    {
+      "source": "/alignment-mobility",
+      "destination": "/alignment-mobility-yoga-rishikesh",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

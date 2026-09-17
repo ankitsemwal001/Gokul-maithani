@@ -25,7 +25,7 @@ export default function FeedbackButton() {
       <button
         id="feedbackBtn"
         onClick={() => setOpen(true)}
-        className={`fixed bottom-6 right-6 bg-primary text-white w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full shadow-xl transition z-50 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-primary text-white w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full shadow-2xl transition z-40 ${
           breathe ? "animate-feedback-breathe" : ""
         }`}
         aria-label="Write a review"
@@ -47,24 +47,24 @@ export default function FeedbackButton() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-10 max-w-md text-center shadow-2xl">
-            <h3 className="text-2xl font-semibold mb-4 text-sage-dark">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-10 max-w-sm sm:max-w-md w-full text-center shadow-2xl animate-fade-in-up">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-sage-dark">
               Loved your yoga experience?
             </h3>
-            <p className="text-charcoal/60 mb-8">
+            <p className="text-charcoal/60 text-xs sm:text-sm mb-6 sm:mb-8">
               Share your feedback and help others start their journey.
             </p>
             <button
               onClick={handleFeedback}
-              className="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary-dark transition mb-4"
+              className="w-full sm:w-auto bg-primary text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-primary-dark transition mb-4"
             >
               Write Review on WhatsApp
             </button>
             <br />
             <button
               onClick={() => setOpen(false)}
-              className="text-charcoal/50 text-sm hover:text-sage-dark"
+              className="text-charcoal/50 text-xs sm:text-sm hover:text-sage-dark py-2"
             >
               Close
             </button>

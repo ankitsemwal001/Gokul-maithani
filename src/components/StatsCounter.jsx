@@ -78,28 +78,26 @@ const STATS = [
 
 export default function StatsCounter() {
   return (
-    <section className="relative -mt-10 md:-mt-14 z-20 max-w-7xl mx-auto px-6">
+    <section className="relative -mt-6 sm:-mt-10 md:-mt-14 z-20 max-w-7xl mx-auto px-4 sm:px-6">
       <Reveal>
-        <div className="bg-linen-light/95 backdrop-blur-md rounded-3xl border border-sage/20 shadow-card p-6 md:p-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-sage/15">
-            {STATS.map((s, idx) => (
+        <div className="bg-linen-light/95 backdrop-blur-md rounded-3xl border border-sage/20 shadow-card p-5 sm:p-7 md:p-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            {STATS.map((s) => (
               <div
                 key={s.label}
-                className={`flex items-center gap-4 ${
-                  idx !== 0 ? "pt-6 md:pt-0 md:pl-8" : ""
-                }`}
+                className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-2 sm:p-0 rounded-2xl bg-white/40 sm:bg-transparent border border-sage/10 sm:border-0"
               >
-                <div className="w-12 h-12 shrink-0 rounded-2xl bg-sage/15 text-sage-dark flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-xl sm:rounded-2xl bg-sage/15 text-sage-dark flex items-center justify-center">
                   {s.icon}
                 </div>
                 <div>
-                  <div className="font-display text-3xl sm:text-4xl font-bold text-sage-dark tracking-tight">
+                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-sage-dark tracking-tight">
                     {s.number}
                   </div>
-                  <div className="font-semibold text-charcoal text-sm">
+                  <div className="font-semibold text-charcoal text-xs sm:text-sm">
                     {s.label}
                   </div>
-                  <div className="text-xs text-charcoal/60 mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-charcoal/60 mt-0.5 leading-tight">
                     {s.subtext}
                   </div>
                 </div>

@@ -36,48 +36,50 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-28 bg-gradient-to-b from-linen via-sage-light/30 to-linen">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="faq" className="py-16 sm:py-20 md:py-24 bg-linen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Centered Header */}
         <Reveal>
-          <div className="text-center max-w-7xl mx-auto mb-16">
+          <div className="text-center max-w-7xl mx-auto mb-8 sm:mb-12">
             <span className="eyebrow">Got Questions?</span>
-            <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-sage-dark mt-3 leading-tight">
               Frequently Asked Questions
             </h2>
-            <p className="text-charcoal/70 mt-4 leading-relaxed">
+            <p className="text-charcoal/75 text-sm sm:text-lg mt-3 leading-relaxed">
               Everything you need to know about joining our classes, studio practice, and private sessions.
             </p>
           </div>
         </Reveal>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        {/* Centered Questions List */}
+        <div className="max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <Reveal key={idx}>
                 <div
-                  className={`card transition duration-300 overflow-hidden ${
-                    isOpen ? "bg-white border-primary/40 shadow-soft" : "bg-linen-light"
+                  className={`card transition-all duration-300 overflow-hidden ${
+                    isOpen ? "bg-white border-primary/40 shadow-soft" : "bg-linen-light hover:bg-white/60"
                   }`}
                 >
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 focus:outline-none"
+                    className="w-full text-left py-3.5 px-4 sm:py-4 sm:px-5.5 flex items-center justify-between gap-3 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-display font-semibold text-lg md:text-xl text-sage-dark">
+                    <span className="font-display font-semibold text-sm sm:text-base text-sage-dark leading-snug">
                       {faq.q}
                     </span>
                     <div
-                      className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                         isOpen
                           ? "bg-primary text-white rotate-180"
                           : "bg-sage/15 text-sage-dark"
                       }`}
                     >
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -93,7 +95,7 @@ export default function FaqSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 md:px-7 pb-6 md:pb-7 text-charcoal/75 text-sm md:text-base leading-relaxed border-t border-sage/10 pt-4 animate-fade-in-up">
+                    <div className="px-4 pb-3.5 sm:px-5.5 sm:pb-4.5 text-charcoal/75 text-xs sm:text-sm leading-relaxed border-t border-sage/10 pt-3 animate-fade-in-up">
                       {faq.a}
                     </div>
                   )}
@@ -102,21 +104,6 @@ export default function FaqSection() {
             );
           })}
         </div>
-
-        {/* Still have questions CTA */}
-        <Reveal>
-          <div className="mt-14 text-center">
-            <p className="text-charcoal/70 text-sm mb-4">
-              Have a specific question about your health or class timing?
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 text-primary font-bold text-sm underline underline-offset-8 hover:text-primary-dark transition"
-            >
-              Ask Gokul Directly via WhatsApp / Contact Form →
-            </a>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

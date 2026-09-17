@@ -5,7 +5,7 @@ const TESTIMONIALS = [
   {
     quote:
       "Practicing with Gokul has completely changed my posture and relieved my back pain. His attention to detail is unmatched.",
-    img: "/assets/ankit.jpg",
+    img: "/assets/gokul-maithani-yoga-student-ankit-rishikesh.webp",
     alt: "Ankit Semwal",
     name: "Ankit Semwal",
     role: "Fourth Year Student",
@@ -14,7 +14,7 @@ const TESTIMONIALS = [
   {
     quote:
       "The meditation techniques I learned here have significantly helped me manage my work stress. It's the highlight of my day.",
-    img: "/assets/student2.jpg",
+    img: "/assets/gokul-maithani-yoga-student-kiran-rishikesh.webp",
     alt: "Kiran Nautiyal",
     name: "Kiran Nautiyal",
     role: "Corporate Professional",
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
   {
     quote:
       "I started as a complete beginner and felt so welcomed. Gokul's teaching style is patient, encouraging, and clear.",
-    img: "/assets/student3.jpg",
+    img: "/assets/gokul-maithani-yoga-student-elena-rishikesh.webp",
     alt: "Elena Rodriguez",
     name: "Elena Rodriguez",
     role: "New Practitioner",
@@ -69,49 +69,51 @@ function StudentAvatar({ t }) {
 
 export default function Testimonials() {
   return (
-    <section className="py-28 max-w-7xl mx-auto px-6">
-      <Reveal>
-        <div className="text-center max-w-7xl mx-auto mb-20">
-          <span className="eyebrow">Student Voice</span>
-          <h2 className="text-4xl md:text-5xl font-display text-sage-dark mt-4">
-            What Our Students Say
-          </h2>
-        </div>
-      </Reveal>
+    <section className="py-16 sm:py-24 md:py-28 bg-linen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <Reveal>
+          <div className="text-center max-w-7xl mx-auto mb-12 sm:mb-16 md:mb-20">
+            <span className="eyebrow">Student Voice</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-sage-dark mt-3 leading-tight">
+              What Our Students Say
+            </h2>
+          </div>
+        </Reveal>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {TESTIMONIALS.map((t) => (
-          <Reveal key={t.name} className="h-full">
-            <div className="card p-9 h-full flex flex-col relative">
-              <span className="text-primary font-display text-6xl leading-none h-10 block">
-                "
-              </span>
-              <p className="text-charcoal/75 italic leading-relaxed mb-8 flex-1">
-                {t.quote}
-              </p>
-              <div className="flex items-center gap-4">
-                <StudentAvatar t={t} />
-                <div>
-                  <h5 className="font-display font-semibold text-sage-dark text-lg">
-                    {t.url ? (
-                      <a
-                        href={t.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary-dark transition"
-                      >
-                        {t.name}
-                      </a>
-                    ) : (
-                      t.name
-                    )}
-                  </h5>
-                  <p className="text-sm text-charcoal/55">{t.role}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {TESTIMONIALS.map((t) => (
+            <Reveal key={t.name} className="h-full">
+              <div className="card p-6 sm:p-9 h-full flex flex-col relative">
+                <span className="text-primary font-display text-4xl sm:text-6xl leading-none h-8 sm:h-10 block">
+                  "
+                </span>
+                <p className="text-charcoal/75 italic text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 flex-1">
+                  {t.quote}
+                </p>
+                <div className="flex items-center gap-3.5 sm:gap-4">
+                  <StudentAvatar t={t} />
+                  <div>
+                    <h5 className="font-display font-semibold text-sage-dark text-base sm:text-lg">
+                      {t.url ? (
+                        <a
+                          href={t.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary-dark transition"
+                        >
+                          {t.name}
+                        </a>
+                      ) : (
+                        t.name
+                      )}
+                    </h5>
+                    <p className="text-xs sm:text-sm text-charcoal/55">{t.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
