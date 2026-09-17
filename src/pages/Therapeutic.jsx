@@ -61,6 +61,10 @@ export default function Therapeutic() {
           src="/assets/side-plank-pose-yoga-rishikesh.webp"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.85]"
           alt="Therapeutic Yoga Practice"
+          width="1440"
+          height="1440"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-linen via-linen/90 to-linen/40"></div>
 
@@ -125,7 +129,7 @@ export default function Therapeutic() {
               Book Therapeutic Class
             </Link>
             <div className="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-8 pt-4 border-t border-sage/15">
-              <img src="/assets/gokul-maithani-yoga-teacher-portrait-rishikesh.webp" className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover saturate-[0.85]" alt="Gokul Maithani" />
+              <img src="/assets/gokul-maithani-yoga-teacher-portrait-rishikesh.webp" className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover saturate-[0.85]" alt="Gokul Maithani" width="861" height="834" loading="lazy" decoding="async" />
               <div>
                 <p className="text-[10px] sm:text-xs text-charcoal/50 font-bold uppercase tracking-wider">LEAD INSTRUCTOR</p>
                 <p className="font-semibold text-sm sm:text-base text-sage-dark">Gokul Maithani</p>

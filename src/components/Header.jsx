@@ -57,6 +57,9 @@ export default function Header() {
             <img
               src="/assets/gokul-maithani-yoga-logo-rishikesh.webp"
               alt="Gokul Maithani Yoga Logo"
+              width="432"
+              height="345"
+              decoding="async"
               className="h-9 sm:h-10 w-auto object-contain transition group-hover:scale-105"
             />
             <span className="font-display font-semibold text-base sm:text-lg text-sage-dark tracking-tight">
@@ -109,30 +112,64 @@ export default function Header() {
 
       {/* Mobile Drawer Menu with Smooth Backdrop */}
       {open && (
-        <div className="md:hidden fixed inset-x-0 top-[4.5rem] bottom-0 bg-linen/98 backdrop-blur-xl z-50 flex flex-col justify-between border-t border-sage/15 overflow-y-auto px-6 py-8 animate-fade-in-up">
-          <nav className="flex flex-col gap-2 text-base font-medium">
-            {NAV_ITEMS.map((item, idx) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleNav(e, item.href)}
-                className="py-3 px-4 rounded-xl text-sage-dark hover:bg-sage/15 active:bg-sage/20 transition font-display font-semibold text-lg flex items-center justify-between"
-                style={{ animationDelay: `${idx * 0.04}s` }}
-              >
-                <span>{item.label}</span>
-                <span className="text-sage text-sm">→</span>
-              </a>
-            ))}
-          </nav>
+        <div className="md:hidden fixed inset-x-0 top-[4.5rem] bottom-0 bg-linen/98 backdrop-blur-2xl z-50 flex flex-col justify-between border-t border-sage/15 overflow-y-auto px-5 py-6 pb-20 animate-fade-in-up">
+          <div>
+            <div className="text-[11px] font-bold uppercase tracking-widest text-primary mb-3 px-2">
+              Menu Navigation
+            </div>
+            <nav className="flex flex-col gap-1.5 text-base font-medium">
+              {NAV_ITEMS.map((item, idx) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNav(e, item.href)}
+                  className="py-2.5 px-4 rounded-xl text-sage-dark hover:bg-sage/15 active:bg-sage/25 transition font-display font-semibold text-lg flex items-center justify-between"
+                  style={{ animationDelay: `${idx * 0.03}s` }}
+                >
+                  <span>{item.label}</span>
+                  <span className="text-sage text-sm opacity-60">→</span>
+                </a>
+              ))}
+            </nav>
+          </div>
 
-          <div className="pt-6 border-t border-sage/20 space-y-4">
+          <div className="pt-5 mt-4 border-t border-sage/20 space-y-3.5">
+            {/* Direct 1-tap Contact Row */}
+            <div className="grid grid-cols-3 gap-2">
+              <a
+                href="https://wa.me/918979400645"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#25D366]/15 text-[#1E7E34] font-bold text-xs active:scale-95 transition"
+              >
+                <i className="fa-brands fa-whatsapp text-sm"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="tel:+918979400645"
+                className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-sage/15 text-sage-dark font-bold text-xs active:scale-95 transition"
+              >
+                <span>📞 Call</span>
+              </a>
+              <a
+                href="https://www.instagram.com/yoga_with_goku"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#E1306C]/10 text-[#C13584] font-bold text-xs active:scale-95 transition"
+              >
+                <i className="fa-brands fa-instagram text-sm"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+
             <a
               href="/contact"
               onClick={(e) => handleNav(e, "/contact")}
               className="w-full btn-primary text-center block py-3.5 shadow-card font-bold text-base"
             >
-              Book a Trial Class
+              Book a Free Trial Class →
             </a>
+
             <div className="text-center text-xs text-charcoal/60">
               📍 Tapovan, Rishikesh • 📞 +91 89794 00645
             </div>

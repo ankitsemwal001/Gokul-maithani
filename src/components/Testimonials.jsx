@@ -55,6 +55,7 @@ function StudentAvatar({ t }) {
           src={t.img}
           alt={t.alt}
           loading="lazy"
+          decoding="async"
           onError={() => setMissing(true)}
           className="w-full h-full object-cover saturate-[0.9]"
         />

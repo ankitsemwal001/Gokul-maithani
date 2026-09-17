@@ -207,6 +207,7 @@ export default function ClassFinder() {
                   <img
                     src={rec.img}
                     alt={rec.name}
+                    decoding="async"
                     className="w-full h-full object-cover saturate-[0.9] transition duration-700 hover:scale-105"
                   />
                   <div className="absolute top-3 left-3 sm:top-4 sm:left-4">

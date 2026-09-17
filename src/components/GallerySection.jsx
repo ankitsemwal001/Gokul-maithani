@@ -114,6 +114,7 @@ export default function GallerySection() {
                   src={item.img}
                   alt={item.title}
                   loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover saturate-[0.9] group-hover:scale-108 transition duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent opacity-80 group-hover:opacity-95 transition duration-300"></div>

@@ -106,6 +106,10 @@ export default function Pranayama() {
           src="/assets/pranayama-breathing-yoga-rishikesh.webp"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.85]"
           alt="Meditation Practice"
+          width="1024"
+          height="1024"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-linen/75"></div>
         <div className="absolute bottom-0 left-0 w-full h-24 sm:h-28 bg-gradient-to-b from-transparent to-linen"></div>
@@ -154,6 +158,10 @@ export default function Pranayama() {
                 <img
                   src="/assets/pranayama-breathing-yoga-rishikesh.webp"
                   alt="Breathing Illustration"
+                  width="1024"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full max-h-72 sm:max-h-80 object-contain saturate-[0.85]"
                 />
               </div>

@@ -160,7 +160,7 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO SECTION WITH RICH SPIRITUAL BACKGROUND & ELEMENTS ================= */}
-      <section id="hero" className="relative flex items-center overflow-hidden bg-linen pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-14 lg:pb-16">
+      <section id="hero" className="relative flex items-center overflow-hidden bg-linen pt-1 pb-8 sm:pt-2 sm:pb-12 lg:pt-2 lg:pb-14">
         {/* Sacred Geometry Mandala Background Watermark (Right/Center) */}
         <div className="absolute top-1/2 right-0 lg:right-12 -translate-y-1/2 w-[380px] xs:w-[500px] sm:w-[700px] lg:w-[850px] aspect-square pointer-events-none select-none opacity-[0.07] text-sage-dark animate-spin-slow -z-0">
           <svg viewBox="0 0 400 400" fill="none" stroke="currentColor" strokeWidth="1" className="w-full h-full">
@@ -281,6 +281,9 @@ export default function Home() {
                   <img
                     src="/assets/manipura-chakra-yoga-energy-rishikesh.webp"
                     alt="Active Manipur Chakra"
+                    width="1766"
+                    height="1766"
+                    decoding="async"
                     className="absolute -top-3 sm:-top-2 md:top-0 left-[2.5%] -translate-x-1/2 w-[230px] xs:w-[280px] sm:w-[340px] md:w-[380px] aspect-square object-contain pointer-events-none select-none z-0 opacity-95 animate-spin-slow filter drop-shadow-[0_0_25px_rgba(234,179,8,0.45)]"
                   />
 
@@ -289,6 +292,9 @@ export default function Home() {
                     <img
                       src="/assets/gokul-maithani-meditation-pose-rishikesh.webp"
                       alt="Yogi Gokul Maithani in Meditation"
+                      width="1086"
+                      height="1448"
+                      fetchpriority="high"
                       className="w-full h-auto max-h-[380px] xs:max-h-[440px] sm:max-h-[540px] object-contain object-bottom saturate-[0.98] transition duration-700 hover:scale-[1.02] filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)]"
                       loading="eager"
                       decoding="async"

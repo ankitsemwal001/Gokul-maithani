@@ -109,6 +109,10 @@ export default function AboutSection() {
                 <img
                   src="/assets/gokul-maithani-yoga-teacher-rishikesh.webp"
                   alt="Gokul Maithani Yoga Master"
+                  width="602"
+                  height="741"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[360px] xs:h-[420px] sm:h-[480px] lg:h-[530px] object-cover object-center saturate-[0.9] hover:scale-[1.02] transition-transform duration-700"
                 />
               </div>

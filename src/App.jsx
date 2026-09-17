@@ -1,15 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MobileQuickBar from "./components/MobileQuickBar";
 import Home from "./pages/Home";
-import Pranayama from "./pages/Pranayama";
-import Ashtanga from "./pages/Ashtanga";
-import HathaYoga from "./pages/HathaYoga";
-import Therapeutic from "./pages/Therapeutic";
-import BeginnerYoga from "./pages/BeginnerYoga";
-import VinyasaYoga from "./pages/VinyasaYoga";
-import AlignmentMobility from "./pages/AlignmentMobility";
+
+// Code-split / Lazy loaded Course Detail Pages
+const Pranayama = lazy(() => import("./pages/Pranayama"));
+const Ashtanga = lazy(() => import("./pages/Ashtanga"));
+const HathaYoga = lazy(() => import("./pages/HathaYoga"));
+const Therapeutic = lazy(() => import("./pages/Therapeutic"));
+const BeginnerYoga = lazy(() => import("./pages/BeginnerYoga"));
+const VinyasaYoga = lazy(() => import("./pages/VinyasaYoga"));
+const AlignmentMobility = lazy(() => import("./pages/AlignmentMobility"));
+
+// Minimal loading placeholder
+function PageLoader() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center bg-linen">
+      <div className="w-10 h-10 border-3 border-sage/20 border-t-primary rounded-full animate-spin"></div>
+    </div>
+  );
+}
 
 export const SECTION_ROUTES = {
   "/schedule": "schedule",
@@ -115,44 +127,47 @@ function LegacyRedirect() {
 
 export default function App() {
   return (
-    <div className="pt-18 sm:pt-20">
+    <div className="pt-18 sm:pt-20 pb-16 md:pb-0">
       <ScrollToTop />
       <Header />
-      <Routes>
-        {/* Main Home & Clean Section URLs */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Home />} />
-        <Route path="/about-yogi-gokul-maithani" element={<Home />} />
-        <Route path="/classes" element={<Home />} />
-        <Route path="/yoga-classes-in-rishikesh" element={<Home />} />
-        <Route path="/yoga-courses-rishikesh" element={<Home />} />
-        <Route path="/schedule" element={<Home />} />
-        <Route path="/yoga-classes-schedule-rishikesh" element={<Home />} />
-        <Route path="/yoga-schedule-rishikesh" element={<Home />} />
-        <Route path="/pricing" element={<Home />} />
-        <Route path="/yoga-classes-fees-rishikesh" element={<Home />} />
-        <Route path="/yoga-pricing-rishikesh" element={<Home />} />
-        <Route path="/gallery" element={<Home />} />
-        <Route path="/yoga-studio-gallery-rishikesh" element={<Home />} />
-        <Route path="/faq" element={<Home />} />
-        <Route path="/yoga-faqs-rishikesh" element={<Home />} />
-        <Route path="/contact" element={<Home />} />
-        <Route path="/contact-yoga-teacher-rishikesh" element={<Home />} />
-        <Route path="/book-trial-yoga-class" element={<Home />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          {/* Main Home & Clean Section URLs */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/about-yogi-gokul-maithani" element={<Home />} />
+          <Route path="/classes" element={<Home />} />
+          <Route path="/yoga-classes-in-rishikesh" element={<Home />} />
+          <Route path="/yoga-courses-rishikesh" element={<Home />} />
+          <Route path="/schedule" element={<Home />} />
+          <Route path="/yoga-classes-schedule-rishikesh" element={<Home />} />
+          <Route path="/yoga-schedule-rishikesh" element={<Home />} />
+          <Route path="/pricing" element={<Home />} />
+          <Route path="/yoga-classes-fees-rishikesh" element={<Home />} />
+          <Route path="/yoga-pricing-rishikesh" element={<Home />} />
+          <Route path="/gallery" element={<Home />} />
+          <Route path="/yoga-studio-gallery-rishikesh" element={<Home />} />
+          <Route path="/faq" element={<Home />} />
+          <Route path="/yoga-faqs-rishikesh" element={<Home />} />
+          <Route path="/contact" element={<Home />} />
+          <Route path="/contact-yoga-teacher-rishikesh" element={<Home />} />
+          <Route path="/book-trial-yoga-class" element={<Home />} />
 
-        {/* Dedicated Course Detail Pages with High-Ranking Slugs */}
-        <Route path="/hatha-yoga-rishikesh" element={<HathaYoga />} />
-        <Route path="/ashtanga-yoga-rishikesh" element={<Ashtanga />} />
-        <Route path="/pranayama-meditation-rishikesh" element={<Pranayama />} />
-        <Route path="/therapeutic-yoga-rishikesh" element={<Therapeutic />} />
-        <Route path="/beginner-yoga-rishikesh" element={<BeginnerYoga />} />
-        <Route path="/vinyasa-yoga-rishikesh" element={<VinyasaYoga />} />
-        <Route path="/alignment-mobility-yoga-rishikesh" element={<AlignmentMobility />} />
+          {/* Dedicated Course Detail Pages with High-Ranking Slugs */}
+          <Route path="/hatha-yoga-rishikesh" element={<HathaYoga />} />
+          <Route path="/ashtanga-yoga-rishikesh" element={<Ashtanga />} />
+          <Route path="/pranayama-meditation-rishikesh" element={<Pranayama />} />
+          <Route path="/therapeutic-yoga-rishikesh" element={<Therapeutic />} />
+          <Route path="/beginner-yoga-rishikesh" element={<BeginnerYoga />} />
+          <Route path="/vinyasa-yoga-rishikesh" element={<VinyasaYoga />} />
+          <Route path="/alignment-mobility-yoga-rishikesh" element={<AlignmentMobility />} />
 
-        {/* Catch-all for redirects */}
-        <Route path="*" element={<LegacyRedirect />} />
-      </Routes>
+          {/* Catch-all for redirects */}
+          <Route path="*" element={<LegacyRedirect />} />
+        </Routes>
+      </Suspense>
       <Footer />
+      <MobileQuickBar />
     </div>
   );
 }

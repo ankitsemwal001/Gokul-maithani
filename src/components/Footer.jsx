@@ -14,8 +14,11 @@ export default function Footer() {
           src="/assets/gokul-maithani-yoga-teacher-portrait-rishikesh.webp"
           alt=""
           aria-hidden="true"
-          className="w-full h-auto object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)] [mask-image:-webkit-linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)]"
+          width="861"
+          height="834"
           loading="lazy"
+          decoding="async"
+          className="w-full h-auto object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)] [mask-image:-webkit-linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)]"
         />
       </div>
 
@@ -25,8 +28,11 @@ export default function Footer() {
           src="/assets/bakasana-crow-pose-yoga-rishikesh.webp"
           alt=""
           aria-hidden="true"
-          className="w-full h-auto object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)] [mask-image:-webkit-linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)]"
+          width="864"
+          height="774"
           loading="lazy"
+          decoding="async"
+          className="w-full h-auto object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)] [mask-image:-webkit-linear-gradient(to_top,rgba(0,0,0,1)_40%,transparent_100%)]"
         />
       </div>
 
@@ -68,6 +74,10 @@ export default function Footer() {
               <img
                 src="/assets/gokul-maithani-yoga-logo-rishikesh.webp"
                 alt="Gokul Maithani Yoga Logo"
+                width="432"
+                height="345"
+                loading="lazy"
+                decoding="async"
                 className="w-9 sm:w-10 h-9 sm:h-10 object-contain"
               />
               <h3 className="text-white font-display font-semibold text-lg sm:text-xl">
